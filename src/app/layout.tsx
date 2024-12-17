@@ -26,14 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased max-w-5xl mx-auto`}
       >
         <Nav/>
-        <main className="row-start-3 flex flex-col items-center justify-center h-max ">
+        <main className="flex items-center justify-center h-max pt-10">
 
         {children}
         </main>
-      <footer className="absolute bottom-0 w-full justify-center items-center flex ">
+      <footer className="relative bottom-0 w-full justify-center items-center flex ">
         footer
       </footer>
       </body>

@@ -2,26 +2,27 @@ import { TagType, Tech } from "@/types";
 import React from "react";
 
 const Tag = ({ label }: TagType): React.ReactNode => {
-  const baseStyle = "border rounded-lg p-1 text-xs w-16 flex items-center justify-center";
+  const baseStyle =
+    "rounded-sm text-xs mr-2 w-fit flex items-center justify-center opacity-85 decoration-2 underline underline-offset-2";
   const tagStyles: {
     [V in Tech]: string;
   } = {
-    Typescript: "text-blue-600 border-blue-500",
-    Javascript: "text-yellow-600 border-yellow-500",
-    Node: "text-green border-green",
+    Typescript: "decoration-blue-500",
+    Javascript: "decoration-yellow-500",
+    Node: "decoration-green-500",
     Postgres: "",
     SQL: "",
     React: "",
-    NextJS: "text-fuchsia-900 border-fuchsia-900",
-    Python: "text-amber-600 border-amber-700",
-    MUI:"",
+    NextJS: "decoration-fuchsia-900",
+    Python: "decoration-amber-700",
+    MUI: "",
     Tailwind: "",
     Database: "",
     NestJS: "",
-    AI: "border-lime-600 text-lime-600",
-    ChatGPT: "border-slate-700 text-slate-700",
-    Bootstrap:"",
-    Express:"",
+    AI: "decoration-lime-600",
+    ChatGPT: "decoration-slate-700",
+    Bootstrap: "",
+    Express: "",
   };
   const style = `${baseStyle} ${tagStyles[label]}`;
 

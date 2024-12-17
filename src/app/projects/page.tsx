@@ -32,7 +32,7 @@ const projects: ProjectType[] = [
   },
   {
     title: "Autoblogger Server",
-    description: "The backedn service nd API that powers Autoblogger",
+    description: "The backend service and API that powers Autoblogger",
 
     repoUrl: "https://github.com/mjkushman/autoblogger-backend",
     tags: [
@@ -73,7 +73,8 @@ const projects: ProjectType[] = [
 
 const Projects = () => {
   return (
-    <div>
+    <div >
+      <h1 className="text-5xl font-semibold">Projects</h1>
       <div>
         {projects.map(({ title, description, liveUrl, repoUrl, tags }) => (
           <Project
