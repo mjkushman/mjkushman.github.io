@@ -7,5 +7,3 @@ export type ProjectType = {
   repoUrl?: string;
   tags?: TagType[];
 };
-
-

@@ -3,6 +3,6 @@ export type WorkItemType = {
   companyName: string;
   location: string;
   startDate: string;
-  endDate?: string;
+  endDate: string;
   description: React.ReactNode;
 };

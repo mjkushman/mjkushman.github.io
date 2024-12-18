@@ -8,7 +8,7 @@ import Metrics from "@/components/Metrics";
 const Projects = () => {
   return (
     <div >
-      <h1 className="text-5xl font-semibold">Projects</h1>
+      <h1 className="text-5xl font-semibold tracking-wide">Projects</h1>
       <div>
         {projects.map(({ title, description, liveUrl, repoUrl, tags }) => (
           <Project

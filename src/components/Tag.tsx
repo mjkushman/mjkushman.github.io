@@ -3,7 +3,7 @@ import React from "react";
 
 const Tag = ({ label }: TagType): React.ReactNode => {
   const baseStyle =
-    "rounded-sm text-xs mr-2 w-fit flex items-center justify-center opacity-85 decoration-2 underline underline-offset-2";
+    "rounded-sm mr-2 w-fit flex items-center justify-center opacity-85 decoration-2 underline underline-offset-2";
   const tagStyles: {
     [V in Tech]: string;
   } = {

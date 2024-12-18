@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #fff7ed;
   --foreground: #171717;
-}
 
+}
+[data-theme="dark"] {
+  --background: #1a123c;
+  --foreground: #d5d3cb;
+
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -18,4 +23,12 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+ol {
+  list-style-type: disc;
+}
+ul {
+  list-style-type: circle;
+  list-style-position: inside;
 }

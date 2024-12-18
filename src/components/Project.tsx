@@ -15,7 +15,7 @@ const Project = ({
         <a className="style-none" href={liveUrl}>
           <h3 className="text-lg font-semibold">{title}</h3>
         </a>
-        <div className="flex flex-wrap gap-1 pb-2">
+        <div className="flex flex-wrap gap-1 pb-2 text-xs">
           {tags?.map((tag) => (
             <Tag label={tag.label} key={tag.label} />
           ))}
