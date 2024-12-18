@@ -1,11 +1,22 @@
-import React from 'react'
+import React from "react";
+import Work from "@/components/Work";
 
-type Props = {}
+type Props = {};
 
 const Resume = (props: Props) => {
   return (
-    <div>Resume</div>
-  )
-}
+    <div>
+      <h1 className="text-5xl font-semibold">Mike Kushman</h1>
+      <div>San Francisco Bay Area</div>
+      <div>skills</div>
+      <div>education</div>
 
-export default Resume
+      <Work />
+
+      <div>education</div>
+      <div>interests</div>
+    </div>
+  );
+};
+
+export default Resume;

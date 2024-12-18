@@ -16,24 +16,25 @@ const links: SiteLink[] = [
   {
     to: "/resume",
     label: "Resume",
-  },
-  {
-    to: "/blog",
-    label: "Blog",
   }
+  // {
+  //   to: "/blog",
+  //   label: "Blog",
+  // }
 ];
 
 const Nav = () => {
   const pathname = usePathname();
-  const gridCols = `grid-cols-${links.length}`;
+  // const gridCols = `grid-cols-${links.length}`;
   return (
-    <nav className={`pt-12 grid ${gridCols} gap-2 m-auto w-fit justify-center`}>
+    
+    <nav className={`pt-12 flex justify-between gap-2 m-auto w-fit`}>
       {links.map(({ to, label }) => {
         return (
           <Link
             key={to}
             href={to}
-            className={`grid-item p-2 text-center gap-2 hover:font-semibold ${
+            className={`p-2 w-20 text-center gap-2 hover:font-semibold ${
               pathname == to
                 ? "font-semibold decoration-2 underline underline-offset-4"
                 : ""
@@ -44,6 +45,7 @@ const Nav = () => {
         );
       })}
     </nav>
+
   );
 };
 
