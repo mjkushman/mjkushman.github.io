@@ -3,7 +3,7 @@ import React from "react";
 
 const WorkItem = (workItem: WorkItemType) => {
   return (
-    <div className="p-3 hover:shadow-md">
+    <div className="p-3 hover:border-foreground border-l border-transparent">
       <div className="flex flex-row m-auto items-center">
         <div className="mr-1">{workItem.startDate}</div>{" "}
         

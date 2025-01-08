@@ -5,12 +5,12 @@
 :root {
   --background: #fff7ed;
   --foreground: #171717;
-
+  --primary: #301f82; 
 }
 [data-theme="dark"] {
   --background: #1a123c;
   --foreground: #d5d3cb;
-
+  --primary: #d5b58b;
 }
 @media (prefers-color-scheme: dark) {
   :root {

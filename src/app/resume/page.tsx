@@ -27,7 +27,7 @@ const Resume = (props: Props) => {
       <Education/>
 
       
-      <div>interests</div>
+      {/* <div>interests</div> */}
     </div>
   );
 };

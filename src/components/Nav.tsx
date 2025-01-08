@@ -16,11 +16,11 @@ const links: SiteLink[] = [
   {
     to: "/resume",
     label: "Resume",
+  },
+  {
+    to: "/blog",
+    label: "Blog",
   }
-  // {
-  //   to: "/blog",
-  //   label: "Blog",
-  // }
 ];
 
 const Nav = () => {
@@ -34,9 +34,9 @@ const Nav = () => {
           <Link
             key={to}
             href={to}
-            className={`p-2 w-20 text-center gap-2 hover:font-semibold ${
+            className={`p-2 w-20 text-center gap-2 hover:underline decoration-[--primary] underline-offset-4 decoration-4 ${
               pathname == to
-                ? "font-semibold decoration-2 underline underline-offset-4"
+                ? "font-semibold decoration-4 underline underline-offset-4 decoration-[--primary]"
                 : ""
             }`}
           >

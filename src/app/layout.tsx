@@ -4,6 +4,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import { Providers } from "@/providers/providers";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,14 +34,15 @@ export default function RootLayout({
       >
         <Providers>
           <Nav />
-          <div><ThemeSwitcher/></div>
+          <div>
+            <ThemeSwitcher />
+          </div>
 
-          <main className="flex items-center justify-center h-max pt-10 max-w-6xl mx-auto px-6">
-            {children}
+          <main className="relative justify-center h-max pt-10 max-w-6xl mx-auto px-6">
+            <div className="flex items-center justify-center">{children}</div>
           </main>
-          <footer className="relative bottom-0 w-full justify-center items-center flex ">
-            footer
-          </footer>
+
+          <Footer />
         </Providers>
       </body>
     </html>

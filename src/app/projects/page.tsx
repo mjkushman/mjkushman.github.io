@@ -1,14 +1,12 @@
 import React from "react";
 import Project from "@/components/Project";
-import projects from "@/fixtures/projects"
-import Metrics from "@/components/Metrics";
-
-
+import projects from "@/fixtures/projects";
 
 const Projects = () => {
   return (
-    <div >
-      <h1 className="text-5xl font-semibold tracking-wide">Projects</h1>
+    <div>
+      <h1 className="text-5xl font-semibold tracking-wide mb-10">Projects</h1>
+      <p>These are a few projects I&apos;ve created.</p>
       <div>
         {projects.map(({ title, description, liveUrl, repoUrl, tags }) => (
           <Project
@@ -20,10 +18,6 @@ const Projects = () => {
             tags={tags}
           />
         ))}
-      </div>
-      <div>
-        <p>API calls made to RunPod</p>
-        <Metrics />
       </div>
     </div>
   );

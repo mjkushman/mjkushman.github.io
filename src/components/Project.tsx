@@ -11,7 +11,7 @@ const Project = ({
 }: ProjectType) => {
   return (
     <div className="justify-center max-w-xl">
-      <div className="p-3 my-4 hover:shadow-md">
+      <div className="p-3 my-4 hover:border-foreground border-l border-transparent">
         <a className="style-none" href={liveUrl}>
           <h3 className="text-lg font-semibold">{title}</h3>
         </a>
@@ -22,8 +22,8 @@ const Project = ({
         </div>
         <p className="pb-4"> {description}</p>
         {liveUrl && (
-          <div className="p-1 w-fit hover:font-semibold">
-            <a href={liveUrl} target="_blank">
+          <div className="p-1 w-fit">
+            <a href={liveUrl} target="_blank " className="hover:underline underline-offset-4 decoration-2 decoration-[--primary]">
               <div className="flex flex-row items-center">
                 <p >View live site</p>
                 <svg
@@ -44,8 +44,8 @@ const Project = ({
         )}
 
         {repoUrl && (
-          <div className="p-1 w-fit hover:font-semibold">
-            <a href={repoUrl} target="_blank">
+          <div className="p-1 w-fit ">
+            <a href={repoUrl} target="_blank" className="hover:underline underline-offset-4 decoration-2 decoration-[--primary]">
               <span className="flex flex-row  items-center">
                 <p>View Github</p>
                 <svg
