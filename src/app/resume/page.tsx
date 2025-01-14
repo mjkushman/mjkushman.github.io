@@ -3,9 +3,7 @@ import Work from "@/components/Work";
 import Skills from "@/components/Skills";
 import Education from "@/components/Education";
 
-type Props = {};
-
-const Resume = (props: Props) => {
+const Resume = (): React.ReactNode => {
   return (
     <div className="block max-w-xl justify-center">
       <div className="mb-4">
@@ -14,9 +12,9 @@ const Resume = (props: Props) => {
         <p>SF Bay Area</p>
       </div>
       <p className="text-sm">
-        My journey to engineering started with growth and
-        product roles. As a result I enjoy a business-aware approach to engineering. And I
-        play well with marketing teams.
+        My journey to engineering started with growth and product roles. As a
+        result I enjoy a business-aware approach to engineering. And I play well
+        with marketing teams.
       </p>
       <p className="text-sm">
         My personal interests are urbanization, infrastructure, and building
@@ -24,9 +22,8 @@ const Resume = (props: Props) => {
       </p>
       <Skills />
       <Work />
-      <Education/>
+      <Education />
 
-      
       {/* <div>interests</div> */}
     </div>
   );

@@ -3,7 +3,7 @@ import React from "react";
 
 const Tag = ({ label }: TagType): React.ReactNode => {
   const baseStyle =
-    "rounded-sm mr-2 w-fit flex items-center justify-center opacity-85 decoration-2 underline underline-offset-2";
+    "w-fit decoration-2 underline underline-offset-2";
   const tagStyles: {
     [V in Tech]: string;
   } = {
@@ -26,7 +26,7 @@ const Tag = ({ label }: TagType): React.ReactNode => {
   };
   const style = `${baseStyle} ${tagStyles[label]}`;
 
-  return <div className={style}>{label}</div>;
+  return <span className={style}>{label}</span>;
 };
 
 export default Tag;

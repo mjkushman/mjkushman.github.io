@@ -17,7 +17,7 @@ const Project = ({
         </a>
         <div className="flex flex-wrap gap-1 pb-2 text-xs">
           {tags?.map((tag) => (
-            <Tag label={tag.label} key={tag.label} />
+            <span key={tag.label} className="mr-3 opacity-85"><Tag label={tag.label}  /></span>
           ))}
         </div>
         <p className="pb-4"> {description}</p>

@@ -25,9 +25,11 @@ const Skills = (props: Props) => {
   return (
     <div className="block max-w-xl justify-center my-4">
       <h2 className="text-xl">Tech</h2>
-      <div className="flex flex-row flex-wrap gap-1 text-sm m-2">
+      <div className="flex flex-row flex-wrap text-sm m-2">
         {techs.map((tech) => (
-          <Tag label={tech} key={tech} />
+          <span key={tech} className="mr-3">
+            <Tag label={tech}  />
+          </span>
         ))}
       </div>
     </div>
