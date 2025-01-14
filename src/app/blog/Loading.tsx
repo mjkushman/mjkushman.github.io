@@ -1,10 +1,10 @@
 "use client"
-import React from 'react'
+import React, { ReactNode } from 'react'
 import SyncLoader from 'react-spinners/SyncLoader'
 
-type Props = {}
 
-const Loading = (props: Props) => {
+
+const Loading = (): ReactNode => {
   return (
     <div><SyncLoader/></div>
   )
