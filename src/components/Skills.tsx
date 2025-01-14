@@ -1,10 +1,8 @@
 import React from "react";
 import Tag from "@/components/Tag";
-import { TagType, Tech } from "@/types";
+import { Tech } from "@/types";
 
-type Props = {};
-
-const Skills = (props: Props) => {
+const Skills = () => {
   const techs: Tech[] = [
     Tech.Typescript,
     Tech.React,
@@ -28,7 +26,7 @@ const Skills = (props: Props) => {
       <div className="flex flex-row flex-wrap text-sm m-2">
         {techs.map((tech) => (
           <span key={tech} className="mr-3">
-            <Tag label={tech}  />
+            <Tag label={tech} />
           </span>
         ))}
       </div>

@@ -1,8 +1,8 @@
 import React from "react";
-import { autoBloggerFetch } from "@/utils/api";
 import Link from "next/link";
+import { BlogPost } from "@/types";
 
-const BlogList = async ({ posts }: { posts: any[] }) => {
+const BlogList = async ({ posts }: { posts: BlogPost[] }) => {
   if (!posts || posts.length == 0) {
     return <div>No posts found.</div>;
   }

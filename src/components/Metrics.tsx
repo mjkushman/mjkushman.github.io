@@ -2,9 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 
-type Props = {};
-
-const Metrics = (props: Props) => {
+const Metrics = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {

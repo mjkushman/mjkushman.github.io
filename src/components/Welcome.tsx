@@ -2,7 +2,6 @@ import Image from "next/image";
 import profilePic from "@/assets/mike_profile_600_square_tiny.jpg";
 import { ReactNode } from "react";
 import Tag from "@/components/Tag";
-import { TagType } from "@/types/Tag.type";
 import { Tech } from "@/types/Tag.type";
 
 const Welcome = (): ReactNode => {
@@ -20,10 +19,12 @@ const Welcome = (): ReactNode => {
           </h3>
           <p className="">
             I&apos;m a Bay Area-based full-stack software engineer specializing
-            in <Tag label={Tech.Typescript} />, <Tag label={Tech.React} />, <Tag label={Tech.Node} />, and <Tag label={Tech.NextJS} />.
+            in <Tag label={Tech.Typescript} />, <Tag label={Tech.React} />,{" "}
+            <Tag label={Tech.Node} />, and <Tag label={Tech.NextJS} />.
           </p>
           <p className="">
-            I love building with AI and strive to design with functional simplicity.
+            I love building with AI and strive to design with functional
+            simplicity.
           </p>
         </div>
 
