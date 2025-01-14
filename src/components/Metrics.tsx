@@ -3,26 +3,29 @@
 import React, { useEffect, useState } from "react";
 
 const Metrics = () => {
-  const [data, setData] = useState(null);
+  async function fetchRequests(): Promise<number> {
+    try {
+      const response = await fetch("https://api.runpod.ai/metrics");
+      const { requests } = await response.json();
+      return requests;
+    } catch (error) {
+      console.log("error fetching", error);
+    }
+    return 0;
+  }
+
+  const [data, setData] = useState(() => fetchRequests());
 
   useEffect(() => {
-    async function fetchRequests() {
-      try {
-        const response = await fetch("https://api.runpod.ai/metrics");
-        const { requests } = await response.json();
-        setData(requests);
-      } catch (error) {
-        console.log("error fetching", error);
-      }
-    }
-    fetchRequests();
+    setData(() => fetchRequests());
 
     const intervalId = setInterval(fetchRequests, 5000);
 
     return () => clearTimeout(intervalId);
   }, []);
 
-  return <div>{data && data.toLocaleString("en-US")}</div>;
+  if (!data) return;
+  return <div>{data.toLocaleString()}</div>;
 };
 
 export default Metrics;
