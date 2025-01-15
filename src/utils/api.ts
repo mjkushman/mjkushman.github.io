@@ -1,4 +1,3 @@
-// not convinced I need a dedicated api utility since I will only make a couple calls.
 
 export const autoBloggerFetch = async (
   endpoint: string,
@@ -9,7 +8,7 @@ export const autoBloggerFetch = async (
 
   const defaultHeaders = {
     "Content-Type": "application/json",
-    ...(apiKey ? { "X-API-KEY": apiKey } : {}), 
+    ...(apiKey ? { "X-API-KEY": apiKey } : {}),
   };
 
   const mergedOptions: RequestInit = {
@@ -20,8 +19,7 @@ export const autoBloggerFetch = async (
     },
   };
   const fetchUrl = [baseUrl, endpoint].join("");
-  // console.log('sending request to', fetchUrl)
-  // console.log('with merged options:', mergedOptions)
+
   const response = await fetch(fetchUrl, mergedOptions);
 
   if (!response.ok) {
