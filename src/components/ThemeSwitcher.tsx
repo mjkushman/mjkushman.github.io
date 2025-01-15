@@ -20,7 +20,7 @@ export default function ThemeSwitcher() {
         alt="Loading Light/Dark Toggle"
         priority={false}
         title="Loading Light/Dark Toggle"
-        className="size-6 absolute right-10 top-10"
+        className="size-6 absolute top-5 right-5 md:right-10 md:top-10"
       />
     );
 
@@ -33,7 +33,7 @@ export default function ThemeSwitcher() {
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="size-6 absolute right-10 top-10"
+        className="size-6 absolute top-5 right-5 md:right-10 md:top-10"
 
       >
         <path
@@ -52,7 +52,7 @@ export default function ThemeSwitcher() {
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="size-6 absolute right-10 top-10"
+        className="size-6 absolute top-5 right-5 md:right-10 md:top-10"
       >
         <path
           fillRule="evenodd"

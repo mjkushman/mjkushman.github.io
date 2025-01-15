@@ -28,13 +28,13 @@ const Nav = () => {
   // const gridCols = `grid-cols-${links.length}`;
   return (
     
-    <nav className={`pt-12 flex justify-between gap-2 m-auto w-fit`}>
+    <nav className={`pt-12 flex justify-between gap-5 m-auto w-fit`}>
       {links.map(({ to, label }) => {
         return (
           <Link
             key={to}
             href={to}
-            className={`p-2 w-20 text-center gap-2 hover:underline decoration-[--primary] underline-offset-4 decoration-4 ${
+            className={`w-fit text-center gap-2 hover:underline decoration-[--primary] underline-offset-4 decoration-4 ${
               pathname == to
                 ? "font-semibold decoration-4 underline underline-offset-4 decoration-[--primary]"
                 : ""
