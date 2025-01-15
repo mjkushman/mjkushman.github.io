@@ -11,15 +11,17 @@ export async function generateStaticParams() {
     const { data } = await response.json();
     const posts: BlogPostType[] = data;
 
-    return posts.map((post) => ({
-      postId: post.postId,
-      content: post.content,
-      title: post.title,
-      date: post.createdAt,
-    }));
+    return posts
+    // return posts.map((post) => ({
+    //   postId: post.postId,
+    //   content: post.content,
+    //   title: post.title,
+    //   date: post.createdAt,
+    // }));
   } catch (error) {
     console.log("api request failed:", error);
   }
+  return [];
 }
 
 const Post = async ({
@@ -27,6 +29,9 @@ const Post = async ({
 }: {
   params: Promise<{
     postId: string;
+    content: string;
+    title: string;
+    date: Date;
   }>;
 }) => {
   const { postId } = await params;

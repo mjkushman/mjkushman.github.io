@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import { BlogPost } from "@/types";
+import { BlogPostType } from "@/types";
 
-const BlogList = async ({ posts }: { posts: BlogPost[] }) => {
+const BlogList = async ({ posts }: { posts: BlogPostType[] }) => {
   if (!posts || posts.length == 0) {
     return <div>No posts found.</div>;
   }
