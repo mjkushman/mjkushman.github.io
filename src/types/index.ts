@@ -4,4 +4,4 @@ export type { TagType } from "@/types/Tag.type";
 export type { WorkItemType } from "@/types/WorkItem.type";
 export type { EducationItemType } from "@/types/EducationItem.type";
 export { Tech } from "@/types/Tag.type";
-export type { BlogPost } from "@/types/BlogPost.type";
+export type { BlogPostType } from "@/types/BlogPost.type";

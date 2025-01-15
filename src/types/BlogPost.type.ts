@@ -1,4 +1,4 @@
-export type BlogPost = {
+export type BlogPostType = {
   accountId: string;
   agentId: string;
   authorId: string;

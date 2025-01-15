@@ -1,13 +1,15 @@
 import BlogPost from "@/components/BlogPost";
+import { BlogPostType } from "@/types";
 import { autoBloggerFetch } from "@/utils/api";
-
+import Loading from "../loading";
 
 export async function generateStaticParams() {
   try {
-    const { data } = await autoBloggerFetch(`posts`, {
+    const response = await autoBloggerFetch(`posts`, {
       next: { revalidate: 600 },
     });
-    const posts = data;
+    const { data } = await response.json();
+    const posts: BlogPostType[] = data;
 
     return posts.map((post) => ({
       postId: post.postId,
@@ -20,16 +22,30 @@ export async function generateStaticParams() {
   }
 }
 
-export default async function Post({
+const Post = async ({
   params,
 }: {
   params: Promise<{
     postId: string;
   }>;
-}) {
+}) => {
   const { postId } = await params;
-  const { data } = await autoBloggerFetch(`posts/${postId}`);
-  const post = data;
+
+  const fetchPost = async (): Promise<BlogPostType> => {
+    const response = await autoBloggerFetch(`posts/${postId}`, {
+      next: { revalidate: 600 },
+    });
+    const { data }: { data: BlogPostType } = await response.json();
+    return data;
+  };
+
+  
+  const post = await fetchPost();
+  if (!post) {
+    return <Loading/>;
+  }
+
   return <BlogPost post={post} />;
-}
-// pst_VO8qJ_104N
+};
+
+export default Post;

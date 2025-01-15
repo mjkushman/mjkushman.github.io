@@ -2,14 +2,14 @@ import BlogList from "@/components/BlogList";
 import Link from "next/link";
 import React from "react";
 import { autoBloggerFetch } from "@/utils/api";
-import { BlogPost } from "@/types";
+import { BlogPostType } from "@/types";
 
-const fetchPosts = async (): Promise<BlogPost[]> => {
+const fetchPosts = async (): Promise<BlogPostType[]> => {
   try {
     const response = await autoBloggerFetch(`posts`, {
       next: { revalidate: 600 },
     });
-    const { data }: { data: BlogPost[] } = await response.json();
+    const { data }: { data: BlogPostType[] } = await response.json();
     return data;
   } catch (error) {
     console.log("api request failed:", error);
