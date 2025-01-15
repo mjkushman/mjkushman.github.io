@@ -1,11 +1,7 @@
-"use client"
-import React from 'react'
-import SyncLoader from 'react-spinners/SyncLoader'
+import LoadingCommon from "@/components/LoadingCommon";
 
-const Loading = () => {
-  return (
-    <div><SyncLoader/></div>
-  )
-}
+const Loading = (): React.ReactNode => {
+  return <LoadingCommon />;
+};
 
-export default Loading
+export default Loading;

@@ -1,7 +1,7 @@
 import BlogPost from "@/components/BlogPost";
 import { BlogPostType } from "@/types";
 import { autoBloggerFetch } from "@/utils/api";
-import Loading from "../loading";
+import LoadingCommon from "@/components/LoadingCommon";
 
 export async function generateStaticParams() {
   try {
@@ -11,13 +11,7 @@ export async function generateStaticParams() {
     const { data } = await response.json();
     const posts: BlogPostType[] = data;
 
-    return posts
-    // return posts.map((post) => ({
-    //   postId: post.postId,
-    //   content: post.content,
-    //   title: post.title,
-    //   date: post.createdAt,
-    // }));
+    return posts;
   } catch (error) {
     console.log("api request failed:", error);
   }
@@ -44,10 +38,9 @@ const Post = async ({
     return data;
   };
 
-  
   const post = await fetchPost();
   if (!post) {
-    return <Loading/>;
+    return <LoadingCommon />;
   }
 
   return <BlogPost post={post} />;
