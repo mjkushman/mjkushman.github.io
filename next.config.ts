@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",  // <=== enables static exports
+
+  basePath: "/portfolio",
   images: {
+    unoptimized: true,
     localPatterns: [
       {
         pathname: "/assets/images/**",

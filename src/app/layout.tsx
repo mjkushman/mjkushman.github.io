@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mike's great app",
-  description: "Made by Mike",
+  title: "Mike Kushman | Fullstack Software Engineer",
+  description: "Learn a little bit about me and my work.",
 };
 
 export default function RootLayout({
