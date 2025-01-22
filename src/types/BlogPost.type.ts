@@ -3,7 +3,7 @@ export type BlogPostType = {
   agentId: string;
   authorId: string;
   content: string;
-  createdAt: Date;
+  createdAt: string;
   imageUrl?: string;
   isPublished: null;
   postId: string;
