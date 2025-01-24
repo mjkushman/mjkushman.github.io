@@ -5,15 +5,14 @@ import LoadingCommon from "@/components/LoadingCommon";
 
 export async function generateStaticParams() {
   try {
-    const response = await autoBloggerFetch(`posts`, {
-      next: { revalidate: 600 },
-    });
+    const response = await autoBloggerFetch(`posts`, {});
+
     const { data } = await response.json();
     const posts: BlogPostType[] = data;
 
-    return posts;
+    return posts.map((post) => ({ postId: post.postId }));
   } catch (error) {
-    console.log("api request failed:", error);
+    console.error("generateStaticParams failed:", error);
   }
   return [];
 }
@@ -23,16 +22,13 @@ const Post = async ({
 }: {
   params: Promise<{
     postId: string;
-    content: string;
-    title: string;
-    date: Date;
   }>;
 }) => {
   const { postId } = await params;
 
   const fetchPost = async (): Promise<BlogPostType> => {
     const response = await autoBloggerFetch(`posts/${postId}`, {
-      next: { revalidate: 600 },
+      next: { revalidate: 1200 },
     });
     const { data }: { data: BlogPostType } = await response.json();
     return data;
