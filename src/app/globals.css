@@ -18,12 +18,17 @@
     --foreground: #ededed;
   }
 }
-
+html {
+  scrollbar-gutter: stable both-edges;
+  overflow: overlay;
+}
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
   transition: background-color 0.5s ease, color 0.5s ease;
+
+  
 }
 ol {
   list-style-type: disc;
