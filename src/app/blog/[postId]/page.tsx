@@ -9,6 +9,7 @@ export async function generateStaticParams() {
 
     const { data } = await response.json();
     const posts: BlogPostType[] = data;
+    console.log("Generated Static Params:", posts.map(post => post.title)); // Debugging
 
     return posts.map((post) => ({ postId: post.postId }));
   } catch (error) {
