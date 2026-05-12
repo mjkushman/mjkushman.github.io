@@ -17,31 +17,31 @@ const Post = ({ post }: { post: BlogPostType }): React.ReactNode => {
       </div>
       <article className="prose">
         <Markdown
-          className="text-[--foreground]"
+          className="text-(--foreground)"
           components={{
             h1: ({ ...props }) => (
-              <h1 className="text-[--primary]" {...props} />
+              <h1 className="text-(--primary)" {...props} />
             ),
             h2: ({ ...props }) => (
-              <h2 className="text-[--foreground]" {...props} />
+              <h2 className="text-(--foreground)" {...props} />
             ),
             h3: ({ ...props }) => (
-              <h3 className="text-[--foreground]" {...props} />
+              <h3 className="text-(--foreground)" {...props} />
             ),
             h4: ({ ...props }) => (
-              <h4 className="text-[--foreground]" {...props} />
+              <h4 className="text-(--foreground)" {...props} />
             ),
             h5: ({ ...props }) => (
-              <h5 className="text-[--foreground]" {...props} />
+              <h5 className="text-(--foreground)" {...props} />
             ),
             h6: ({ ...props }) => (
-              <h6 className="text-[--foreground]" {...props} />
+              <h6 className="text-(--foreground)" {...props} />
             ),
             strong: ({ ...props }) => (
-              <strong className="text-[--primary]" {...props} />
+              <strong className="text-(--primary)" {...props} />
             ),
             p: ({ ...props }) => (
-              <p className="text-[--foreground]" {...props} />
+              <p className="text-(--foreground)" {...props} />
             ),
           }}
         >

@@ -34,9 +34,9 @@ const Nav = () => {
           <Link
             key={to}
             href={to}
-            className={`w-fit text-center gap-2 hover:underline decoration-[--primary] underline-offset-4 decoration-4 ${
+            className={`w-fit text-center gap-2 hover:underline decoration-(--primary) underline-offset-4 decoration-4 ${
               pathname == to
-                ? "font-semibold decoration-4 underline underline-offset-4 decoration-[--primary]"
+                ? "font-semibold decoration-4 underline underline-offset-4 decoration-(--primary)"
                 : ""
             }`}
           >

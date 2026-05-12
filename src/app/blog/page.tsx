@@ -27,7 +27,7 @@ const Blog = async () => {
         It&apos;s powered by my project{" "}
         <Link
           href={"https://autoblogger-client.onrender.com/"}
-          className="hover:underline decoration-[--primary] underline-offset-2"
+          className="hover:underline decoration-(--primary) underline-offset-2"
         >
           Autoblogger
         </Link>

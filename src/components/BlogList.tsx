@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { BlogPostType } from "@/types";
 
@@ -17,7 +16,7 @@ const BlogList = async ({ posts }: { posts: BlogPostType[] }) => {
           <div className="my-2">
             <Link
               href={`blog/${p.postId}`}
-              className="hover:underline decoration-[--primary] underline-offset-2"
+              className="hover:underline decoration-(--primary) underline-offset-2"
             >
               {p.title}
             </Link>

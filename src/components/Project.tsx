@@ -23,7 +23,7 @@ const Project = ({
         <p className="pb-4"> {description}</p>
         {liveUrl && (
           <div className="p-1 w-fit">
-            <a href={liveUrl} target="_blank " className="hover:underline underline-offset-4 decoration-2 decoration-[--primary]">
+            <a href={liveUrl} target="_blank " className="hover:underline underline-offset-4 decoration-2 decoration-(--primary)">
               <div className="flex flex-row items-center">
                 <p >View live site</p>
                 <svg
@@ -45,7 +45,7 @@ const Project = ({
 
         {repoUrl && (
           <div className="p-1 w-fit ">
-            <a href={repoUrl} target="_blank" className="hover:underline underline-offset-4 decoration-2 decoration-[--primary]">
+            <a href={repoUrl} target="_blank" className="hover:underline underline-offset-4 decoration-2 decoration-(--primary)">
               <span className="flex flex-row  items-center">
                 <p>View Github</p>
                 <svg
