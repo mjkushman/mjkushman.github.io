@@ -17,7 +17,6 @@ const Post = ({ post }: { post: BlogPostType }): React.ReactNode => {
       </div>
       <article className="prose">
         <Markdown
-          className="text-(--foreground)"
           components={{
             h1: ({ ...props }) => (
               <h1 className="text-(--primary)" {...props} />
