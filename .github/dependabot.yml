@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: "npm" # Tell it you're using npm
+    directory: "/"           # Where your package.json lives
+    schedule:
+      interval: "weekly"     # Options: daily, weekly, monthly
+    open-pull-requests-limit: 5 # Prevent it from spamming 50 PRs at once
+    groups:
+      # Optional: This groups all updates into one single PR
+      dependencies:
+        patterns:
+          - "*"
